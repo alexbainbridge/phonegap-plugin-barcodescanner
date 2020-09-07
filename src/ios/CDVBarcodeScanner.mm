@@ -357,15 +357,11 @@ parentViewController:(UIViewController*)parentViewController
 }
 
 //--------------------------------------------------------------------------
-- (void)openDialog {
-    if (@available(iOS 13, *)) {
-        [self.viewController setModalPresentationStyle:UIModalPresentationFullScreen];
-    }
-    [self.parentViewController
-     presentViewController:self.viewController
-     animated:self.isTransitionAnimated completion:nil
-     ];
-}
+
+- (void)openDialog { [
+    self.viewController setModalPresentationStyle:UIModalPresentationFullScreen]; 
+    [self.parentViewController presentViewController:self.viewController animated: NO completion:nil]; 
+   }
 
 //--------------------------------------------------------------------------
 - (void)barcodeScanDone:(void (^)(void))callbackBlock {
